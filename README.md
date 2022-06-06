@@ -18,7 +18,7 @@ It can get absurdly large for large documents.
 ***
 
 Before we compute the total size the matrix takes, we first find out the total size some data types in python take
-```
+```python3
 >>> import sys
 >>> sys.getsizeof("")
 49
@@ -66,7 +66,7 @@ Note that these words may/may not be present in the dataset. It is just for illu
 | hi | LN-20020105029  |
 
 In this case, the inverted index would have the following structure:
-```
+```python3
 {
 	"Sněžení" : Hashset([ "LN-20020105001", "LN-20020105025" ]),
 	"World"   : Hashset([ "LN-20020105026" ]),
@@ -110,7 +110,7 @@ If two items have the same hash, I use a linked-list to store elements with the 
 
 Elements of hashset_a or hashset_b
 
-```
+```python3
 union(Hashset hashset_a, Hashset hashset_b):
 	new_hashset = hashset_a
 	for element in hashset_b:
@@ -122,13 +122,13 @@ union(Hashset hashset_a, Hashset hashset_b):
 ### INTERSECTION [ O(|hashset_a| + |hashset_b|) ]
 
 Elements that are present in both hashset_a and hashset_b
-```
+```python3
 intersection(Hashset hashset_a, Hashset hashset_b):
 	new_hashset = Hashset()
 	for elment in hashset_a:
 		if element is present in hashset_b then:
 			store element to new_hashset
-			
+
 	for element in hashset_b:
 		if element is present in hashset_a then:
 			store element to new_hashset
@@ -138,7 +138,7 @@ intersection(Hashset hashset_a, Hashset hashset_b):
 
 Elements of hashset_a that are not present in hashset_b
 
-```
+```python3
 and_not(Hashset hashset_a, Hashset hashset_b):
 	new_hashset = Hashset()
 	for element in hashset_a:
@@ -152,7 +152,7 @@ Before running the program, make sure that the dataset (***A2/ is in the same di
 
 ***If not, refer to step (2) of the running guide below.***
 
-```
+```python3
 BOOLEAN-RETRIEVAL
 │   README.md
 │   requirements.txt
@@ -191,7 +191,7 @@ BOOLEAN-RETRIEVAL
      	|	queryprocessor.py
      	|	reader.py
      	|	...
-   
+
 ```
 
 ## Running the Program
@@ -228,7 +228,7 @@ $ source venv/bin/activate
       ```
       (venv)$ python3 main.py --verbose --save
       ```
-      
+
 5. ***Remove all project-generated files and directories***
     ```
     (venv)$ make clean
