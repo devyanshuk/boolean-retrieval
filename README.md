@@ -89,10 +89,10 @@ All 25 queries from documents_cs.xml file are processed one-by-one and then the 
 
 | Postfix list  | Stack  |
 |---|-----|
-| ["Sněžení", "World", "OR"] | [] |
-| ["World", "OR"]  | [ Hashset([ "LN-20020105001", "LN-20020105025" ])  ]  |
-| ["OR"]  |  [ Hashset([ "LN-20020105001", "LN-20020105025" ]), Hashset([ "LN-20020105026" ])] |
-|[] | Hashset([ "LN-20020105001", "LN-20020105025",  "LN-20020105026" ]) |
+| ```python3 ["Sněžení", "World", "OR"] ``` | ```python3 [] ``` |
+| ```python3 ["World", "OR"] ```  | ```python3 [ Hashset([ "LN-20020105001", "LN-20020105025" ])  ]```  |
+| ```python3 ["OR"] ```  |  ```python3 [ Hashset([ "LN-20020105001", "LN-20020105025" ]), Hashset([ "LN-20020105026" ])]``` |
+| ```python3 [] ``` | ```python3 Hashset([ "LN-20020105001", "LN-20020105025",  "LN-20020105026" ]) ``` |
 
 In the last step, the QueryProcessor performs the union operation on the two Hashsets.
 
