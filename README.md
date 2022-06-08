@@ -31,7 +31,7 @@ Before we compute the total size the matrix takes, we first find out the total s
 >>> sys.getsizeof([random.choice([0, 1]) for _ in range(81694)])
 711960
 ```
-So, for a string of length n, the size in python would be $49 + len(n)$
+So, for a string of length n, the size in python would be 49 + len(n)
 
 ### Assumption
 1. Words are, on average, of length 6
